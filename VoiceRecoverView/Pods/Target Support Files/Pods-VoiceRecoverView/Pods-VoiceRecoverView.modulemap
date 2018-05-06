@@ -1,0 +1,6 @@
+framework module Pods_VoiceRecoverView {
+  umbrella header "Pods-VoiceRecoverView-umbrella.h"
+
+  export *
+  module * { export * }
+}

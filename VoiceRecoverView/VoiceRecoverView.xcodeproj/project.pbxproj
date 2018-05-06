@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		147DC44F55F338646DD551DC /* Pods_VoiceRecoverView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11F2DE00A179EF0B1EE5495 /* Pods_VoiceRecoverView.framework */; };
 		2F67E147209FA1350091F19F /* VoiceRecoverView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F67E145209FA1350091F19F /* VoiceRecoverView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F67E14F209FA1970091F19F /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F67E14E209FA1970091F19F /* Recorder.swift */; };
 		2F67E155209FA1D50091F19F /* VoiceRecoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F67E150209FA1D40091F19F /* VoiceRecoverView.xib */; };
@@ -14,9 +15,11 @@
 		2F67E157209FA1D50091F19F /* PeaksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F67E152209FA1D40091F19F /* PeaksView.swift */; };
 		2F67E158209FA1D50091F19F /* VoicePlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F67E153209FA1D40091F19F /* VoicePlayView.xib */; };
 		2F67E159209FA1D50091F19F /* VoiceRecoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F67E154209FA1D40091F19F /* VoiceRecoverView.swift */; };
+		2F67E15B209FA4260091F19F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F67E15A209FA4260091F19F /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F0FC12AF0D0D6AACB67D12C /* Pods-VoiceRecoverView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceRecoverView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VoiceRecoverView/Pods-VoiceRecoverView.debug.xcconfig"; sourceTree = "<group>"; };
 		2F67E142209FA1350091F19F /* VoiceRecoverView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VoiceRecoverView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F67E145209FA1350091F19F /* VoiceRecoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoiceRecoverView.h; sourceTree = "<group>"; };
 		2F67E146209FA1350091F19F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -26,6 +29,9 @@
 		2F67E152209FA1D40091F19F /* PeaksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeaksView.swift; sourceTree = "<group>"; };
 		2F67E153209FA1D40091F19F /* VoicePlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoicePlayView.xib; sourceTree = "<group>"; };
 		2F67E154209FA1D40091F19F /* VoiceRecoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceRecoverView.swift; sourceTree = "<group>"; };
+		2F67E15A209FA4260091F19F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		B11F2DE00A179EF0B1EE5495 /* Pods_VoiceRecoverView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoiceRecoverView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E947E4FD0B489607FDB60ECD /* Pods-VoiceRecoverView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceRecoverView.release.xcconfig"; path = "Pods/Target Support Files/Pods-VoiceRecoverView/Pods-VoiceRecoverView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				147DC44F55F338646DD551DC /* Pods_VoiceRecoverView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +51,8 @@
 			children = (
 				2F67E144209FA1350091F19F /* VoiceRecoverView */,
 				2F67E143209FA1350091F19F /* Products */,
+				935B29DCB10CDBFD058EF0AA /* Pods */,
+				7C916024A3470A1EB4E9D6A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,8 +83,26 @@
 				2F67E14E209FA1970091F19F /* Recorder.swift */,
 				2F67E145209FA1350091F19F /* VoiceRecoverView.h */,
 				2F67E146209FA1350091F19F /* Info.plist */,
+				2F67E15A209FA4260091F19F /* Extension.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		7C916024A3470A1EB4E9D6A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B11F2DE00A179EF0B1EE5495 /* Pods_VoiceRecoverView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		935B29DCB10CDBFD058EF0AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F0FC12AF0D0D6AACB67D12C /* Pods-VoiceRecoverView.debug.xcconfig */,
+				E947E4FD0B489607FDB60ECD /* Pods-VoiceRecoverView.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +123,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F67E14A209FA1350091F19F /* Build configuration list for PBXNativeTarget "VoiceRecoverView" */;
 			buildPhases = (
+				C80C49B246197FBFAECAD6E5 /* [CP] Check Pods Manifest.lock */,
 				2F67E13D209FA1350091F19F /* Sources */,
 				2F67E13E209FA1350091F19F /* Frameworks */,
 				2F67E13F209FA1350091F19F /* Headers */,
@@ -155,11 +183,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C80C49B246197FBFAECAD6E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VoiceRecoverView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2F67E13D209FA1350091F19F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F67E15B209FA4260091F19F /* Extension.swift in Sources */,
 				2F67E159209FA1D50091F19F /* VoiceRecoverView.swift in Sources */,
 				2F67E157209FA1D50091F19F /* PeaksView.swift in Sources */,
 				2F67E14F209FA1970091F19F /* Recorder.swift in Sources */,
@@ -285,6 +335,7 @@
 		};
 		2F67E14B209FA1350091F19F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F0FC12AF0D0D6AACB67D12C /* Pods-VoiceRecoverView.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -308,6 +359,7 @@
 		};
 		2F67E14C209FA1350091F19F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E947E4FD0B489607FDB60ECD /* Pods-VoiceRecoverView.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
