@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		147DC44F55F338646DD551DC /* Pods_VoiceRecoverView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11F2DE00A179EF0B1EE5495 /* Pods_VoiceRecoverView.framework */; };
+		2F55028C20A041EA0010DF11 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55028B20A041EA0010DF11 /* Recorder.swift */; };
 		2F67E147209FA1350091F19F /* VoiceRecoverView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F67E145209FA1350091F19F /* VoiceRecoverView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2F67E14F209FA1970091F19F /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F67E14E209FA1970091F19F /* Recorder.swift */; };
 		2F67E155209FA1D50091F19F /* VoiceRecoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F67E150209FA1D40091F19F /* VoiceRecoverView.xib */; };
 		2F67E156209FA1D50091F19F /* VoicePlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F67E151209FA1D40091F19F /* VoicePlayView.swift */; };
 		2F67E157209FA1D50091F19F /* PeaksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F67E152209FA1D40091F19F /* PeaksView.swift */; };
@@ -20,10 +20,10 @@
 
 /* Begin PBXFileReference section */
 		0F0FC12AF0D0D6AACB67D12C /* Pods-VoiceRecoverView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceRecoverView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VoiceRecoverView/Pods-VoiceRecoverView.debug.xcconfig"; sourceTree = "<group>"; };
+		2F55028B20A041EA0010DF11 /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		2F67E142209FA1350091F19F /* VoiceRecoverView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VoiceRecoverView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F67E145209FA1350091F19F /* VoiceRecoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoiceRecoverView.h; sourceTree = "<group>"; };
 		2F67E146209FA1350091F19F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F67E14E209FA1970091F19F /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		2F67E150209FA1D40091F19F /* VoiceRecoverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoiceRecoverView.xib; sourceTree = "<group>"; };
 		2F67E151209FA1D40091F19F /* VoicePlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoicePlayView.swift; sourceTree = "<group>"; };
 		2F67E152209FA1D40091F19F /* PeaksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeaksView.swift; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		2F67E14D209FA1610091F19F /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				2F67E14E209FA1970091F19F /* Recorder.swift */,
+				2F55028B20A041EA0010DF11 /* Recorder.swift */,
 				2F67E145209FA1350091F19F /* VoiceRecoverView.h */,
 				2F67E146209FA1350091F19F /* Info.plist */,
 				2F67E15A209FA4260091F19F /* Extension.swift */,
@@ -209,10 +209,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F55028C20A041EA0010DF11 /* Recorder.swift in Sources */,
 				2F67E15B209FA4260091F19F /* Extension.swift in Sources */,
 				2F67E159209FA1D50091F19F /* VoiceRecoverView.swift in Sources */,
 				2F67E157209FA1D50091F19F /* PeaksView.swift in Sources */,
-				2F67E14F209FA1970091F19F /* Recorder.swift in Sources */,
 				2F67E156209FA1D50091F19F /* VoicePlayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +347,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/VoiceRecoverView/Support/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.aristovz.VoiceRecoverView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -371,6 +372,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/VoiceRecoverView/Support/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.aristovz.VoiceRecoverView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

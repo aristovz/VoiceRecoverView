@@ -64,12 +64,6 @@ public class Recording : NSObject {
         super.init()
     }
     
-    // MARK: - Initializers
-    public init(url: URL) {
-        self.url = url
-        super.init()
-    }
-    
     // MARK: - Record
     public func prepare() throws {
         let settings = [
@@ -90,7 +84,7 @@ public class Recording : NSObject {
         if recorder == nil {
             try prepare()
         }
-        
+    
         try session.setCategory(AVAudioSessionCategoryPlayAndRecord)
         try session.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
         

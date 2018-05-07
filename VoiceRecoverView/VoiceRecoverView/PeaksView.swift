@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 extension Comparable {
     func clamped(to limits: ClosedRange<Self>) -> Self {
@@ -21,6 +22,28 @@ extension Strideable where Self.Stride: SignedInteger {
     }
 }
 
+extension AVAudioPlayer {
+    public enum State: Int {
+        case play, pause
+    }
+    
+    public var state: State {
+        get {
+            
+            return self.rate != 0 ? .play : .pause
+        }
+    }
+    
+    public func setProgress(progress: Double) {
+        guard self.currentTime > Double(0) else {
+                return
+        }
+    
+        self.currentTime = Double(duration * progress)
+        //delegate?.didChangePlayerCurrentTime?(currentTime: time)
+    }
+}
+
 protocol PeaksViewDelegate: class {
     func panGestureDidEnd(_ peaksView: PeaksView, progress: Double)
 }
@@ -32,7 +55,7 @@ extension PeaksViewDelegate {
 class PeaksView: UIView {
     
     var recorder: Recording? = nil
-    var player: MusicPlayer? = nil
+    var player: AVAudioPlayer? = nil
     weak var delegate: PeaksViewDelegate? = nil
     
     // Минимальная высота пика в px
@@ -124,13 +147,12 @@ class PeaksView: UIView {
     @objc func panGestureAction(_ sender: UIPanGestureRecognizer) {
         
         if let player = player {
-            guard player.state == .Play || player.state == .Pause else { return }
+            guard player.state == .play || player.state == .pause else { return }
             
             if sender.state == .began {
                 player.pause()
             } else if sender.state == .ended {
-                do { try player.play() }
-                catch { print(error) }
+                player.play()
             }
             
             let location = sender.location(in: self).x
