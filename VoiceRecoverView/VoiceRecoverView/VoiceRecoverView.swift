@@ -14,7 +14,7 @@ protocol VoiceRecoverViewDelegate: class {
     func didSendRecord(at url: URL, duration: Int, peaks: [Float])
 }
 
-class VoiceRecoverView: UIView {
+public class VoiceRecoverView: UIView {
     
     @IBOutlet weak var recoverIcon: UIView!
     @IBOutlet weak var containerView: UIView!
@@ -44,7 +44,7 @@ class VoiceRecoverView: UIView {
     var playerView: VoicePlayView? = nil
     weak var delegate: VoiceRecoverViewDelegate? = nil
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         
         setFAIcons()
         setupRecorder()
@@ -219,7 +219,7 @@ class VoiceRecoverView: UIView {
 }
 
 extension VoiceRecoverView: RecorderDelegate {
-    func didChangeRecordCurrentTime(currentTime: TimeInterval) {
+    public func didChangeRecordCurrentTime(currentTime: TimeInterval) {
         
         guard Int(currentTime) <= 300 else {
             recorder.stop()
@@ -232,9 +232,9 @@ extension VoiceRecoverView: RecorderDelegate {
         timeLabel.text = "\(Int(minutes)):\(seconds < 10 ? "0" : "")\(Int(seconds))"
     }
     
-    func didStopRecord() { }
+    public func didStopRecord() { }
     
-    func audioMeterDidUpdate(dB: Float) {
+    public func audioMeterDidUpdate(dB: Float) {
         decibels.append(-dB)
         
         let scale = 40 - CGFloat( -dB / 1.3 )
